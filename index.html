@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroForte - Sustentabilidade no Campo</title>
+    <style>
+        /* Cores Simples */
+        :root {
+            --verde: #2E7D32;
+            --amarelo: #F9A825;
+            --azul: #0288D1;
+            --branco: #ffffff;
+            --cinza: #f4f4f4;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: var(--verde);
+            color: var(--branco);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 { margin: 0; font-size: 1.5rem; }
+        
+        nav a {
+            color: var(--branco);
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+
+        /* Banner */
+        .banner {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .banner h2 { font-size: 2.5rem; margin-bottom: 10px; }
+        .banner button {
+            background: var(--amarelo);
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        /* Seções */
+        section { padding: 40px 20px; max-width: 1000px; margin: 0 auto; }
+
+        .economia { background: var(--branco); }
+        .tecnologias { background: var(--cinza); }
+        .desafios { background: var(--branco); }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: var(--branco);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--verde);
+        }
+
+        .card h3 { color: var(--verde); margin-top: 0; }
+
+        /* Calculadora */
+        .calculadora {
+            background: #222;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+        
+        .calculadora input, .calculadora button {
+            padding: 10px;
+            font-size: 1rem;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .calculadora button { background: var(--amarelo); cursor: pointer; }
+
+        /* Rodapé */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 600px) {
+            header { flex-direction: column; text-align: center; }
+            nav { margin-top: 10px; }
+            nav a { display: block; margin: 5px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu -->
+    <header>
+        <h1>AgroForte</h1>
+        <nav>
+            <a href="#economia">Economia</a>
+            <a href="#tecnologias">Tecnologias</a>
+            <a href="#desafios">Desafios</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="banner">
+        <h2>Produzir mais, preservando o amanhã.</h2>
+        <p>Agro forte, futuro sustentável.</p>
+        <button onclick="location.href='#tecnologias'">Descobrir Mais</button>
+    </section>
+
+    <!-- 1. Economia -->
+    <section id="economia" class="economia">
+        <h2>O Agro na Economia</h2>
+        <p>Veja por que o campo é o motor do Brasil.</p>
+        
+        <div class="cards">
+            <div class="card">
+                <h3>24% do PIB</h3>
+                <p>O agronegrocio representa cerca de 24% do Produto Interno Bruto brasileiro.</p>
+            </div>
+            <div class="card">
+                <h3>Emprego</h3>
+                <p>Setor que mais emprega no país, da fazenda à industria.</p>
+            </div>
+            <div class="card">
+                <h3>Exportação</h3>
+                <p>Brasil é celeiro mundial de soja, carne, café e laranja.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Tecnologias -->
+    <section id="tecnologias" class="tecnologias">
+        <h2>Tecnologias Sustentáveis</h2>
+        <p>Como a inovação salva o meio ambiente.</p>
+
+        <div class="cards">
+            <div class="card" style="border-left-color: var(--azul);">
+                <h3>Agricultura de Precisão</h3>
+                <p>Uso de GPS para aplicar defensivos apenas onde é preciso.</p>
+            </div>
+            <div class="card" style="border-left-color: var(--azul);">
+                <h3>Irrigação Inteligente</h3>
+                <p>Sensores que regam a planta só quando ela precisa de água.</p>
+            </div>
+            <div class="card" style="border-left-color: var(--azul);">
+                <h3>Drones e Energia Solar</h3>
+                <p>Mapeamento de lavouras e painéis solares para energia limpa.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Desafios -->
+    <section id="desafios" class="desafios">
+        <h2>Desafios Ambientais</h2>
+        <p>O crescimento precisa ser inclusivo com a natureza.</p>
+        
+        <div class="cards">
+            <div class="card" style="border-left-color: #c62828;">
+                <h3>Desmatamento</h3>
+                <p>Expansão de áreas em biomas sensiveis como Amazônia e Cerrado.</p>
+            </div>
+            <div class="card" style="border-left-color: #c62828;">
+                <h3>Uso da Água</h3>
+                <p>Irrigação responde por grande parte do consumo de água doce.</p>
+            </div>
+            <div class="card" style="border-left-color: #c62828;">
+                <h3>Emissão de Carbono</h3>
+                <p>Gases de efeito estufa vindos da pecuaria e maquinas.</p>
+            </div>
+        </div>
+
+        <!-- Calculadora -->
+        <div class="calculadora" id="contato">
+            <h3>Calculadora de Impacto</h3>
+            <p>Calcule quanta água você economiza com tecnologia:</p>
+            <br>
+            <input type="number" id="area" placeholder="Área em hectares">
+            <button onclick="calcular()">Calcular</button>
+            <p id="resultado" style="margin-top: 15px; font-weight: bold;"></p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Cada escolha no campo alimenta o mundo.</p>
+        <p>&copy; 2023 AgroForte - Projeto Educativo</p>
+    </footer>
+
+    <script>
+        // Script simples para a calculadora
+        function calcular() {
+            var area = document.getElementById('area').value;
+            if(area > 0) {
+                // Simulacao: 1 hectare com tecnologia economiza 200.000 litros de agua
+                var economia = area * 200000;
+                document.getElementById('resultado').innerText = 
+                    "Você economizaria: " + economia.toLocaleString() + " litros de água!";
+            } else {
+                alert("Por favor, digite uma área válida.");
+            }
+        }
+    </script>
+
+</body>
+</html>
